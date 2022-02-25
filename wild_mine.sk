@@ -46,7 +46,6 @@ on break of stone or stone:1 or stone:3 or stone:5 or dirt or coal_ore or iron_o
 			set {_block} to emerald_ore
 		set event-block to {_block}
 
-
 on break of snow or ice or packed_ice:
 	if world of player is "야생":
 		wait 6 seconds
