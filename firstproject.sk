@@ -1,0 +1,39 @@
+on right click:
+	if name of player's tool contain "랜덤티켓":
+		remove 1 of player's tool from player's tool
+		send message "&6* 랜덤으로 플레이어에게 효과를 부여합니다." to player
+		wait 1 seconds
+		set {_randtemp} to random integer between 0 and 19
+		if {_randtemp} is between 0 and 1:
+			make console execute command "effect @r slowness 120 1"
+			send message "&6* 누군가에게 속도저하 효과를 줍니다." to player
+		else if {_randtemp} is between 2 and 3:
+			make console execute command "effect @r haste 120 1"
+			send message "&6* 누군가에게 성급함 효과를 줍니다." to player
+		else if {_randtemp} is between 3 and 4:
+			make console execute command "effect @r saturation 120 1"
+			send message "&6* 누군가에게 포화 효과를 줍니다." to player
+		else if {_randtemp} is between 4 and 5:
+			make console execute command "effect @r invisibility 120 1"
+			send message "&6* 누군가에게 투명화 효과를 줍니다." to player
+		else if {_randtemp} is between 6 and 7:
+			make console execute command "effect @r hunger 120 1"
+			send message "&6* 누군가에게 배고픔 효과를 줍니다." to player
+		else if {_randtemp} is between 8 and 9:
+			make console execute command "effect @r glowing 120 1"
+			send message "&6* 누군가에게 발광 효과를 줍니다." to player
+		else if {_randtemp} is between 10 and 11:
+			make console execute command "effect @r jump_boost 120 1"
+			send message "&6* 누군가에게 점프강화 효과를 줍니다." to player
+		else if {_randtemp} is between 12 and 13:
+			make console execute command "effect @r luck 120 1"
+			send message "&6* 누군가에게 행운(낚시) 효과를 줍니다." to player
+		else if {_randtemp} is between 14 and 15:
+			make console execute command "effect @r health_boost 120 1"
+			send message "&6* 누군가에게 생명력강화 효과를 줍니다." to player
+		else if {_randtemp} is between 16 and 17:
+			make console execute command "effect @r mining_fatigue 60 1"
+			send message "&6* 누군가에게 채굴피로 효과를 줍니다." to player
+		else if {_randtemp} is between 18 and 19:
+			make console execute command "effect @r nausea 30 1"
+			send message "&6* 누군가에게 멀미 효과를 줍니다." to player
