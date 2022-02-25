@@ -1,0 +1,114 @@
+command /야생입구:
+	trigger:
+		if player is op:
+		set {mine.location} to player's location
+		send message "&6* 광산의 좌표가 %{mine4.location}%으로 설정되었습니다." to player
+
+command /광산입구:
+	trigger:
+		if player is op:
+		set {mine.location} to player's location
+		send message "&6* 광산의 좌표가 %{mine.location}%으로 설정되었습니다." to player
+		
+command /광산출구:
+	trigger:
+		if player is op:
+		set {mine2.location} to player's location
+		send message "&6* 광산출구의 좌표가 %{mine2.location}%으로 설정되었습니다." to player
+
+command /지옥입구:
+	trigger:
+		if player is op:
+		set {mine3.location} to player's location
+		send message "&6* 지옥입구의 좌표가 %{mine3.location}%으로 설정되었습니다." to player
+
+on right click:
+	if name of player's tool contain "광산5분이용권":
+		remove 1 of player's tool from player's tool
+		send message "&6* 광산으로 출발합니다." to player
+		wait 1 seconds
+		send message "&6..2" to player
+		wait 1 seconds
+		send message "&6..1" to player
+		wait 1 seconds
+		teleport the player to {mine.location}
+		wait 280 seconds
+		send message "&6* 20초 뒤 광산출구로 돌아갑니다." to player
+		wait 15 seconds
+		send message "&6* 5초 뒤 광산출구로 돌아갑니다." to player
+		wait 5 seconds
+		teleport the player to {mine2.location}	
+		
+on right click:
+	if name of player's tool contain "야생20분이용권":
+		remove 1 of player's tool from player's tool
+		send message "&6* 야생으로 출발합니다." to player
+		wait 1 seconds
+		send message "&6..2" to player
+		wait 1 seconds
+		send message "&6..1" to player
+		wait 1 seconds
+		teleport the player to {mine4.location}
+		wait 1180 seconds
+		send message "&6* 20초 뒤 광산출구로 돌아갑니다." to player
+		wait 15 seconds
+		send message "&6* 5초 뒤 광산출구로 돌아갑니다." to player
+		wait 5 seconds
+		teleport the player to {mine2.location}
+		
+on right click:
+	if name of player's tool contain "광산10분이용권":
+		remove 1 of player's tool from player's tool
+		send message "&6* 광산으로 출발합니다." to player
+		wait 1 seconds
+		send message "&6..2" to player
+		wait 1 seconds
+		send message "&6..1" to player
+		wait 1 seconds
+		teleport the player to {mine.location}
+		wait 580 seconds
+		send message "&6* 20초 뒤 광산출구로 돌아갑니다." to player
+		wait 15 seconds
+		send message "&6* 5초 뒤 광산출구로 돌아갑니다." to player
+		wait 5 seconds	
+		teleport the player to {mine2.location}
+		
+on right click:
+	if name of player's tool contain "지옥광산이용권":
+		remove 1 of player's tool from player's tool
+		send message "&6* 지옥광산으로 출발합니다. 울타리 밖으로 절대 나가지 마세요!" to player
+		wait 1 seconds
+		send message "&6..2" to player
+		wait 1 seconds
+		send message "&6..1" to player
+		wait 1 seconds
+		teleport the player to {mine3.location}
+		wait 30 seconds
+		send message "&6* 10초 뒤 광산출구로 돌아갑니다." to player
+		wait 5 seconds
+		send message "&6* 5초 뒤 광산출구로 돌아갑니다." to player
+		wait 5 seconds	
+		teleport the player to {mine2.location}
+		
+
+command /홈입구:
+	trigger:
+		if player is op:
+		set {mine5.location} to player's location
+		send message "&6* 홈의 좌표가 %{mine5.location}%으로 설정되었습니다." to player
+		
+on right click:
+	if name of player's tool contain "홈 워프권":
+		send message "&6* 홈으로 갑니다." to player
+		wait 1 seconds
+		teleport the player to {mine5.location}
+		
+on right click:
+	if name of player's tool contain "홈 워프권(일회용)":
+		remove 1 of player's tool from player's tool
+		send message "&6* 홈으로 갑니다." to player
+		wait 1 seconds
+		teleport the player to {mine5.location}
+		
+
+		

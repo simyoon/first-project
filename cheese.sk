@@ -1,0 +1,4 @@
+on right click:
+	if "%event-item%" contains "치즈":
+		send message "&6* 치즈는 바닥에 설치할 수 없습니다." to player
+		cancel event

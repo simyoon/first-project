@@ -1,0 +1,6 @@
+on join:
+	set join message to "&c%player% &e님 피자는 가져 오셨겠죠?" or "&c%player% &e님이 어소소에 착륙 하셨습니다." or "&c%player% &e님이 등장하셨어요!" or "앗! 야생의 &c%player% &e이(가) 나타났다!" or "&c%player% &e님이 오셨어요." or "&c%player% &e님이 어소소에 뛰어들어 오셨어요." or "&c%player% &e님이 어소소에 막 등장하셨어요." or "만나서 반가워요, &c%player% &e님."
+	
+	
+on quit:
+	set quit message to "&c%player% &e님 다음에 또 봐요!"
