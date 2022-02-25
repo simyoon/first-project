@@ -1,0 +1,60 @@
+on break of oak log or spruce log or birch log or jungle log or acacia log or dark oak log:
+	if world of player is "야생":
+		wait 5 seconds
+		set {_randtemp} to random integer between 0 and 1000
+		if {_randtemp} is between 0 and 500:
+			set {_block} to oak log
+		else if {_randtemp} is between 501 and 600:
+			set {_block} to spruce log
+		else if {_randtemp} is between 601 and 700:
+			set {_block} to birch log
+		else if {_randtemp} is between 701 and 800:
+			set {_block} to jungle log
+		else if {_randtemp} is between 801 and 900:
+			set {_block} to acacia log
+		else if {_randtemp} is between 901 and 1000:
+			set {_block} to dark oak log
+		set event-block to {_block}
+		
+on break of stone or stone:1 or stone:3 or stone:5 or dirt or coal_ore or iron_ore or redstone_ore or gold_ore or diamond_ore or emerald_ore or lapis_ore:
+	if world of player is "야생":
+		wait 5 seconds
+		set {_randtemp} to random integer between 0 and 1000
+		if {_randtemp} is between 0 and 165:
+			set {_block} to stone
+		else if {_randtemp} is between 166 and 325:
+			set {_block} to stone:1
+		else if {_randtemp} is between 326 and 485:
+			set {_block} to stone:3
+		else if {_randtemp} is between 486 and 645:
+			set {_block} to stone:5
+		else if {_randtemp} is between 646 and 760:
+			set {_block} to dirt
+		else if {_randtemp} is between 761 and 860:
+			set {_block} to coal_ore
+		else if {_randtemp} is between 861 and 930:
+			set {_block} to iron_ore
+		else if {_randtemp} is between 931 and 955:
+			set {_block} to redstone_ore
+		else if {_randtemp} is between 956 and 970:
+			set {_block} to lapis_ore
+		else if {_randtemp} is between 971 and 990:
+			set {_block} to gold_ore
+		else if {_randtemp} is between 991 and 997:
+			set {_block} to diamond_ore
+		else if {_randtemp} is between 998 and 1000:
+			set {_block} to emerald_ore
+		set event-block to {_block}
+
+
+on break of snow or ice or packed_ice:
+	if world of player is "야생":
+		wait 6 seconds
+		set {_randtemp} to random integer between 0 and 300
+		if {_randtemp} is between 0 and 100:
+			set {_block} to snow
+		else if {_randtemp} is between 101 and 200:
+			set {_block} to ice
+		else if {_randtemp} is between 201 and 300:
+			set {_block} to packed_ice
+		set event-block to {_block}
